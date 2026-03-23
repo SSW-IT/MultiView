@@ -119,47 +119,6 @@ Ctrl+. : Cancel loading
 F1 : Help
 F11 : Fullscreen
 
-## Implementation Highlights
--Asynchronous Loading with QThread
-	- Ensures smooth UI performance without blocking during heavy image loading.
-
--Viewport-based Image Loading
-	- Only images near the visible area are loaded into memory.
-	- Distant images are automatically released to reduce memory usage.
--Progressive Image Strategy
-	-Thumbnails are loaded first for fast rendering.
-	-Full-resolution images are requested only for visible regions.
--Cancelable Loading System
-	-Ongoing image loading can be safely interrupted at any time.
--Flexible Remote Input Support
-	-Supports multiple input formats:
-		-Single image URL
-		-List of URLs
-		-HTTP directory index
-		-UNC (network) folders
--Webtoon Episode Tracking & Series Download
-	-Automatically detects and follows episode links from webtoon URLs.
-	-Supports full-series downloading from a starting episode.
--Non-blocking User Experience
-	-Users can continue browsing other content while downloads are running in the background.
-
-## Build (Portable EXE)
-
-pyinstaller ^
-  --noconfirm ^
-  --clean ^
-  --windowed ^
-  --onedir ^
-  --name "MultiView" ^
-  --icon=app.ico ^
-  --collect-all PySide6 ^
-  --hidden-import PySide6.QtCore ^
-  --hidden-import PySide6.QtGui ^
-  --hidden-import PySide6.QtWidgets ^
-  --hidden-import PySide6.QtNetwork ^
-  --hidden-import requests ^
-  main.py
-
 ## Test Checklist
 
 -Open folder
@@ -177,11 +136,10 @@ pyinstaller ^
 
 Webtoon website structures may change over time, which can require updates to the URL parsing logic.
 Features based on Playwright depend on the availability and correct installation of browser resources.
-It is recommended not to upload dist/, build/, or virtual environment folders to GitHub.
 
 Disclaimer
 
-This project is intended for educational and research purposes only.
+This project is intended for educational and study purposes only.
 Downloading or distributing copyrighted content without permission may violate copyright laws.
 The developer is not responsible for any misuse of this software.
 Use responsibly and legally.

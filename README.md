@@ -6,7 +6,7 @@
 
 **로컬 ZIP 파일 감상부터 웹툰 정주행 자동 다운로드까지 지원하는 고성능 멀티 이미지 뷰어입니다.**
 
-## 💡 핵심 기능 요약
+##  핵심 기능 요약
 - Non-blocking 백그라운드 다운로드:** 정주행 다운로드 중에도 메인 뷰어에서 다른 작품 열람 및 조작 가능.
 - 가상화 스크롤 렌더링:** 4,000장 이상의 거대 ZIP 파일도 메모리 누수 없이 실시간 로딩 및 해제 (Virtual Viewport 적용).
 - Anti-Bot 회피 스크래핑:** Playwright 기반 브라우저 핑거프린트 위장 및 Lazy Loading 완벽 파훼.
@@ -31,7 +31,7 @@
 - 책갈피 저장 / 복원
 - F1 도움말
 
-## 📌 프로젝트 소개
+##  프로젝트 소개
 
 ### 어떤 프로그램인가요?
 **MultiView**는 파편화된 웹툰 감상 환경을 하나로 통합한 데스크톱 애플리케이션입니다. 로컬에 저장된 이미지/ZIP/폴더를 끊김 없는(Gapless) 세로 스크롤로 감상할 수 있으며, 원격 웹툰 URL을 입력하여 실시간으로 보거나 백그라운드에서 전체 회차를 자동 다운로드할 수 있습니다.
@@ -105,36 +105,6 @@ python main.py
 - 웹툰 URL에서 회차 추적 및 정주행 다운로드 지원
 - 다운로드 중에도 다른 작품을 계속 열람 가능
 
-## EXE 빌드 예시
-
-```bash
-pyinstaller ^
-  --noconfirm ^
-  --clean ^
-  --windowed ^
-  --onedir ^
-  --name "MultiView" ^
-  --icon=app.ico ^
-  --collect-all PySide6 ^
-  --hidden-import PySide6.QtCore ^
-  --hidden-import PySide6.QtGui ^
-  --hidden-import PySide6.QtWidgets ^
-  --hidden-import PySide6.QtNetwork ^
-  --hidden-import requests ^
-  main.py
-```
-
-## 배포 절차
-
-1. 가상환경에서 프로그램이 정상 실행되는지 확인
-2. `requirements.txt` 최신화
-3. `playwright install` 실행
-4. PyInstaller로 `dist/MultiView` 생성
-5. `dist/MultiView/MultiView.exe` 실행 테스트
-6. 로컬 ZIP / 폴더 / 웹툰 URL / 정주행 다운로드 기능 점검
-7. 이상 없으면 `dist/MultiView` 폴더 전체 압축
-8. 배포본과 소스코드를 분리 관리
-
 ## 테스트 체크리스트
 
 - 로컬 폴더 열기
@@ -148,40 +118,10 @@ pyinstaller ^
 - F1 도움말 표시
 - 종료 후 재실행 안정성
 
-## GitHub 업로드 권장 구성
-
-```text
-MultiView/
-├─ main.py
-├─ viewer.py
-├─ loader.py
-├─ downloader.py
-├─ scraper_bridge.py
-├─ bookmark.py
-├─ requirements.txt
-├─ README.md
-├─ README.txt
-├─ .gitignore
-└─ docs/
-   └─ screenshots/
-```
-
-## GitHub 업로드 순서
-
-```bash
-git init
-git add .
-git commit -m "Initial commit: MultiView webtoon viewer"
-git branch -M main
-git remote add origin https://github.com/<your-id>/MultiView.git
-git push -u origin main
-```
-
 ## 주의사항
 
 - 웹툰 사이트 구조가 바뀌면 일부 URL 파싱 로직은 수정이 필요할 수 있습니다.
 - Playwright 기반 기능은 브라우저 리소스 설치 상태에 영향을 받습니다.
-- GitHub에는 `dist/`, `build/`, 가상환경 폴더를 올리지 않는 것을 권장합니다.
 
 ⚠️ Disclaimer (면책 조항)
 본 프로그램(MultiView)은 기술 학습 및 프로그래밍 공부 목적으로 개발된 오픈소스 도구입니다.

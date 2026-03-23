@@ -101,6 +101,7 @@ MultiView/
 pip install -r requirements.txt
 playwright install
 python main.py
+```
 
 ## key Shortcuts
 Ctrl+L : Open local files

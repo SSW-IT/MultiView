@@ -2,6 +2,10 @@
 
 **A high-performance multi-image viewer that supports seamless local viewing and automated webtoon series downloading.**
 
+<img width="276" height="298" alt="화면 캡처 2026-03-23 195346" src="https://github.com/user-attachments/assets/5efc51c5-aa96-49e4-832b-bb0bfe2129a2" />
+<img width="1274" height="951" alt="화면 캡처 2026-03-23 195314" src="https://github.com/user-attachments/assets/8bc61dc5-8388-4e8e-8475-98266d527a19" />
+
+
 ##  Key Features
 
 - **Non-blocking Background Downloading**

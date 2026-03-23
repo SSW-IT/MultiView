@@ -1,5 +1,5 @@
 # MultiView (Advanced Webtoon Viewer & Downloader)
-
+[🇺🇸 Read in English](README(EN).md)
 
 <img width="276" height="298" alt="화면 캡처 2026-03-23 195346" src="https://github.com/user-attachments/assets/343b3791-d39e-4fd7-b182-0a43235d6a67" />
 <img width="1274" height="951" alt="화면 캡처 2026-03-23 195314" src="https://github.com/user-attachments/assets/a931a350-812a-4202-8344-08f99ae83db6" />
